@@ -10,7 +10,7 @@
 
 (function () {
     'use strict';
-
+    const yourid = "yourid"
     const appIdMatch = window.location.pathname.match(/\/gamecards\/(\d+)/);
     if (!appIdMatch) return;
     const appId = appIdMatch[1];
@@ -38,7 +38,7 @@
             clearInterval(interval);
 
             const newLink = document.createElement('a');
-            newLink.href = `https://steamcommunity.com/id/client/friendsthatplay/${appId}`;
+            newLink.href = `https://steamcommunity.com/id/${yourid}/friendsthatplay/${appId}`;
             newLink.className = storePageButton.className;
             newLink.style.marginLeft = '6px';
 
